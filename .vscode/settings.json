@@ -1,0 +1,25 @@
+{
+  "Lua.diagnostics.globals": ["vim"],
+  "cSpell.words": [
+    "bufnr",
+    "Chadrc",
+    "ctermbg",
+    "fileformat",
+    "gitsigns",
+    "globalstatus",
+    "guibg",
+    "hererocks",
+    "luarocks",
+    "macchiato",
+    "nvimtree",
+    "onedark",
+    "overriden",
+    "stevearc",
+    "tabline",
+    "toggleterm",
+    "tokyonight",
+    "undercurl",
+    "winbar",
+    "xiyaowong"
+  ]
+}
