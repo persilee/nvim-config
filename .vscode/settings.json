@@ -1,6 +1,7 @@
 {
   "Lua.diagnostics.globals": ["vim"],
   "cSpell.words": [
+    "autopep",
     "bufnr",
     "Chadrc",
     "ctermbg",
@@ -11,15 +12,23 @@
     "hererocks",
     "luarocks",
     "macchiato",
+    "mccabe",
     "nvimtree",
     "onedark",
     "overriden",
+    "pycodestyle",
+    "pyflakes",
     "stevearc",
     "tabline",
+    "timeoutlen",
     "toggleterm",
     "tokyonight",
+    "ttimeout",
+    "ttimeoutlen",
     "undercurl",
+    "updatetime",
     "winbar",
-    "xiyaowong"
+    "xiyaowong",
+    "yapf"
   ]
 }

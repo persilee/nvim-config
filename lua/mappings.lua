@@ -1,4 +1,10 @@
-require "nvchad.mappings"
+-- ========================公共配置========================
+-- 映射 jj 到 ESC 退出插入模式
+vim.keymap.set('i', 'jj', '<ESC>', {
+  noremap = true,
+  silent = true,
+  desc = 'Exit insert mode with jj'
+})
 
 -- 设置 Vim 键位映射，修改基本的移动键位
 -- 在普通模式(n)和可视模式(v)下重新映射方向键
@@ -27,8 +33,8 @@ vim.keymap.set('v', 'L', ':m \'<-2<CR>gv=gv')
 -- clear search highlighting
 vim.keymap.set('n', '<Esc>', ':nohlsearch<cr>')
 
--- Only load vscode-multi-cursor in vscode environment
 if vim.g.vscode then
+  -- ========================VS Code 配置======================
   local cursors = require('vscode-multi-cursor')
 
   vim.keymap.set({ 'n', 'x', 'i' }, '<c-d>', function()
@@ -42,14 +48,7 @@ if vim.g.vscode then
   vim.keymap.set({ 'n', 'x', 'i' }, '<cs-l>', function()
     cursors.selectHighlights()
   end)
-else
-  vim.keymap.set('n', '<c-d>', 'mciw*:nohl<cr>', {
-    remap = true
-  })
-end
 
--- 将键位映射到 VS Code
-if vim.g.vscode then
   local opts = {
     noremap = true,
     silent = true
@@ -98,6 +97,7 @@ if vim.g.vscode then
     { 'n', '<leader>qf', 'editor.action.quickFix' },                -- 快速修复
     { 'n', '<leader>sg', 'editor.action.triggerSuggest' },          -- 触发代码建议
     { { 'n', 'v' }, '<leader>dd', 'codegeex.askcodegeex.comment' }, -- CodeGeeX注释
+    { { 'n', 'v' }, '<leader>g', 'workbench.view.scm' },            -- 查看git面板
 
     --[[编辑器操作]]
     { 'n', '<leader>lu', 'editor.action.copyLinesUpAction' },   -- 向上复制行
@@ -140,6 +140,16 @@ if vim.g.vscode then
     end, opts)
   end
 else
+  -- ========================Neovim 配置========================
+  -- 使用 nvchad 的默认映射
+  require "nvchad.mappings"
+
+  -- 设置一个键盘映射，用于在普通模式下使用 Ctrl+d 快捷键
+  -- 该快捷键会执行一系列操作：标记当前位置，执行搜索
+  vim.keymap.set('n', '<c-d>', 'mciw*:nohl<cr>', {
+    remap = true -- 允许此映射被递归调用，即可以重新映射此映射
+  })
+
   -- 退出当前窗口
   vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "退出当前窗口", noremap = true, silent = true })
 
