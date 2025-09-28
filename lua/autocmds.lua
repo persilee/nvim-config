@@ -3,7 +3,7 @@ require "nvchad.autocmds"
 -- open config
 vim.cmd('nmap <leader>c :e ~/.config/nvim/init.lua<cr>')
 
--- open config
+-- open mappings
 vim.cmd('nmap <leader>m :e ~/.config/nvim/lua/mappings.lua<cr>')
 
 -- save
