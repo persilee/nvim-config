@@ -1,11 +1,5 @@
 require "nvchad.options"
 
--- 键盘延迟优化
-vim.opt.timeoutlen = 100
-vim.opt.ttimeoutlen = 1
-vim.opt.ttimeout = true
-vim.opt.updatetime = 250
-
 -- sync system clipboard
 vim.opt.clipboard = 'unnamedplus'
 

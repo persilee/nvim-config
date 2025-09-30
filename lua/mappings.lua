@@ -1,11 +1,4 @@
 -- ========================公共配置========================
--- 映射 jj 到 ESC 退出插入模式
-vim.keymap.set('i', 'jj', '<ESC>', {
-  noremap = true,
-  silent = true,
-  desc = 'Exit insert mode with jj'
-})
-
 -- 设置 Vim 键位映射，修改基本的移动键位
 -- 在普通模式(n)和可视模式(v)下重新映射方向键
 -- 将 'j' 键映射为 'h'（向左移动）
@@ -150,15 +143,7 @@ else
     remap = true -- 允许此映射被递归调用，即可以重新映射此映射
   })
 
-  -- 退出当前窗口
-  vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "退出当前窗口", noremap = true, silent = true })
-
-  -- 强制退出当前窗口
-  vim.keymap.set("n", "<leader>Q", "<cmd>q!<CR>", { desc = "强制退出当前窗口", noremap = true, silent = true })
-
-  -- 退出所有窗口
-  vim.keymap.set("n", "<leader>qq", "<cmd>qa<CR>", { desc = "退出所有窗口", noremap = true, silent = true })
-
-  -- 强制退出所有窗口
-  vim.keymap.set("n", "<leader>QQ", "<cmd>qa!<CR>", { desc = "强制退出所有窗口", noremap = true, silent = true })
+  vim.keymap.set("n", "<leader>Q", "<cmd>qall<CR>", { desc = "退出所有窗口", noremap = true, silent = true })
+  vim.keymap.set("n", "<leader>W", "<cmd>wqall<CR>", { desc = "保存并退出所有窗口", noremap = true, silent = true })
+  vim.keymap.set("n", "<leader>!", "<cmd>qall!<CR>", { desc = "强制退出所有窗口", noremap = true, silent = true })
 end
