@@ -119,8 +119,8 @@ if vim.g.vscode then
     { 'n', '<leader>nn', 'notifications.showList' },                     -- 显示通知列表
 
     --[[编辑器操作]]
-    { 'n', '<leader>wv', 'workbench.action.splitEditor' },     -- 垂直分割编辑器
-    { 'n', '<leader>wh', 'workbench.action.splitEditorDown' }, -- 水平分割编辑器
+    { 'n', '<leader>wv', 'workbench.action.splitEditor' },     -- 向右分割编辑器
+    { 'n', '<leader>wh', 'workbench.action.splitEditorDown' }, -- 向下分割编辑器
     { 'n', '<leader>ww', 'workbench.action.joinTwoGroups' },   -- 合并两个编辑器组
     { 'n', '<leader>wa', 'workbench.action.evenEditorWidths' } -- 均等编辑器宽度
   }
@@ -143,7 +143,10 @@ else
     remap = true -- 允许此映射被递归调用，即可以重新映射此映射
   })
 
-  vim.keymap.set("n", "<leader>Q", "<cmd>qall<CR>", { desc = "退出所有窗口", noremap = true, silent = true })
-  vim.keymap.set("n", "<leader>W", "<cmd>wqall<CR>", { desc = "保存并退出所有窗口", noremap = true, silent = true })
-  vim.keymap.set("n", "<leader>!", "<cmd>qall!<CR>", { desc = "强制退出所有窗口", noremap = true, silent = true })
+  vim.keymap.set("n", "<leader>Q", "<cmd>qall<CR>",
+    { desc = "退出所有窗口", noremap = true, silent = true })
+  vim.keymap.set("n", "<leader>W", "<cmd>wqall<CR>",
+  { desc = "保存并退出所有窗口", noremap = true, silent = true })
+  vim.keymap.set("n", "<leader>!", "<cmd>qall!<CR>",
+    { desc = "强制退出所有窗口", noremap = true, silent = true })
 end
