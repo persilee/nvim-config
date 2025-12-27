@@ -6,20 +6,20 @@ return {
   },
 
   -- These are some examples, uncomment them if you want to see them work!
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "configs.lspconfig"
-    end,
-  },
+  -- {
+  --   "neovim/nvim-lspconfig",
+  --   config = function()
+  --     require "configs.lspconfig"
+  --   end,
+  -- },
 
   -- NvChad
-  {
-    "NvChad/NvChad",
-    lazy = false,
-    branch = "v2.5",
-    import = "nvchad.plugins"
-  },
+  -- {
+  --   "NvChad/NvChad",
+  --   lazy = false,
+  --   branch = "v2.5",
+  --   import = "nvchad.plugins"
+  -- },
 
   -- 这是一个用于 VSCode 环境的多光标操作插件
   {
