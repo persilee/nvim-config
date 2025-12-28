@@ -1,4 +1,4 @@
-require "nvchad.autocmds"
+-- require "nvchad.autocmds"
 
 -- open config
 vim.cmd('nmap <leader>c :e ~/.config/nvim/init.lua<cr>')

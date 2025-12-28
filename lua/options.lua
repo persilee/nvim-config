@@ -1,4 +1,4 @@
-require "nvchad.options"
+-- require "nvchad.options"
 
 -- sync system clipboard
 vim.opt.clipboard = 'unnamedplus'
